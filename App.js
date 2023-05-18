@@ -1,10 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-red-300">
-      <Text className="text-slate-800">Styling just works! 🎉</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
