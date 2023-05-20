@@ -74,9 +74,23 @@ const HomeScreen = () => {
 
         {/* Feautured */}
         <Feautured
+          id='123'
           title='Feautured'
           description='Feautured restaurants'
-          featuredCategory='Feautured'
+        />
+
+        {/* Tasty Discounts */}
+        <Feautured
+          id='1234'
+          title='Tasty Discounts'
+          description='Enjoy juicy discounts'
+        />
+
+        {/* Offers near you */}
+        <Feautured
+          id='12345'
+          title='Offers near you'
+          description='We have got you covered'
         />
       </ScrollView>
     </SafeAreaView>
