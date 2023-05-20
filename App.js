@@ -7,6 +7,7 @@ import { NativeWindStyleSheet } from "nativewind";
 const Stack = createNativeStackNavigator();
 NativeWindStyleSheet.setOutput({
   default: "native",
+  web: "nativewind",
 });
 
 export default function App() {
