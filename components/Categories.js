@@ -5,8 +5,9 @@ import CategoryCard from "./CategoryCard";
 const Categories = () => {
   const imgUrls = [
     "https://links.papareact.com/wru",
-    "https://placehold.it/150x150",
-    "https://placehold.it/150x150",
+    "https://links.papareact.com/wru",
+    "https://links.papareact.com/wru",
+    "https://links.papareact.com/wru",
     "https://links.papareact.com/wru",
     "https://links.papareact.com/wru",
   ];
