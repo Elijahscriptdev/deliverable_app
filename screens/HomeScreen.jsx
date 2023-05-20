@@ -14,7 +14,8 @@ import {
   AdjustmentsVerticalIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
-import Categories from "../components/categories";
+import Categories from "../components/Categories";
+import Feautured from "../components/Feautured";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -70,6 +71,13 @@ const HomeScreen = () => {
       >
         {/* Categories */}
         <Categories />
+
+        {/* Feautured */}
+        <Feautured
+          title='Feautured'
+          description='Feautured restaurants'
+          featuredCategory='Feautured'
+        />
       </ScrollView>
     </SafeAreaView>
   );
