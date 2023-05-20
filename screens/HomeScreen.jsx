@@ -14,7 +14,7 @@ import {
   AdjustmentsVerticalIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
-import Categories from "../components/Categories";
+import Categories from "../components/categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();

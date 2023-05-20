@@ -3,6 +3,14 @@ import React from "react";
 import CategoryCard from "./CategoryCard";
 
 const Categories = () => {
+  const imgUrls = [
+    "https://links.papareact.com/wru",
+    "https://placehold.it/150x150",
+    "https://placehold.it/150x150",
+    "https://links.papareact.com/wru",
+    "https://links.papareact.com/wru",
+  ];
+
   return (
     <ScrollView
       horizontal
@@ -12,13 +20,11 @@ const Categories = () => {
       }}
       showsHorizontalScrollIndicator={false}
     >
-        {/* Categoty cards */}
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-      <Text>Categories test</Text>
+      {/* Categoty cards */}
+
+      {imgUrls.map((imgUrl, index) => (
+        <CategoryCard key={index} title={index + 1} imgUrl={imgUrl} />
+      ))}
     </ScrollView>
   );
 };
