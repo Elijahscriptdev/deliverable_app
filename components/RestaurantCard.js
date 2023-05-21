@@ -38,16 +38,16 @@ const RestaurantCard = ({
   liked,
 }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity className='bg-white mr-3 shadow'>
       <Image
         source={{
           uri: imgUrl,
         }}
-        className='h-36 w-64 rounded'
+        className='h-40 w-64 rounded'
       />
       <View className='px-3 pb-4'>
         <Text className='text-bold text-lg pt-2'>{title}</Text>
-        <View className='flex-row items-center space-x-1'>
+        <View className='flex-row items-center space-x-1 mb-1'>
           {/* <Text className='text-sm text-gray-500'>{genre}</Text> */}
           <StarIcon color='green' opacity={0.5} size={22} />
           <Text className='text-sm text-green-500'>
@@ -56,10 +56,16 @@ const RestaurantCard = ({
           </Text>
         </View>
 
-        <View className='flex-row items-center space-x-1'>
+        <View className='flex-row items-center space-x-1 mb-1'>
           <MapPinIcon color='gray' opacity={0.4} size={20} />
           <Text className='text-xs text-gray-500'>{address}</Text>
-          {/* <Text className='text-sm text-gray-500'> * {deliveryTime}</Text> */}
+        </View>
+
+        <View className='flex-row items-center space-x-1'>
+          <Text className='text-bold text-xs'>
+            Delivery time
+            <Text className='text-xs'> - {deliveryTime} minutes</Text>
+          </Text>
         </View>
       </View>
     </TouchableOpacity>
