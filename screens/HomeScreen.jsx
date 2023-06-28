@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import {
   View,
   Text,
@@ -16,6 +16,7 @@ import {
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
 import Feautured from "../components/Feautured";
+import sanityClient from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -25,6 +26,25 @@ const HomeScreen = () => {
       headerShown: false,
     });
   }, [navigation]);
+
+  useEffect(() => {
+    sanityClient
+      .fetch('*[_type == "restaurant"]')
+      .then((data) => console.log(data));
+    // sanityClient
+    //   .fetch(
+    //     `
+    // *[_type == "featured"]{
+    //   ...,
+    //   restaurant[]->{
+    //     ...,
+    //     dishes[]->
+    //   }
+    // }`
+    //   )
+    //   .then((data) => console.log(data))
+    //   .catch((error) => console.log(error));
+  }, []);
 
   return (
     <SafeAreaView className='bg-white pt-5'>
